@@ -12,8 +12,8 @@ defined to create a traditional backup schedule including retention by each fold
 
 ## History
 
-23-Feb-2017: Initial script
-19-Dec-2017: Updated to include all branches of each repo to be fetched/pulled each time through
+- 23-Feb-2017: Initial script
+- 19-Dec-2017: Updated to include all branches of each repo to be fetched/pulled each time through
 
 ## Credits
 
