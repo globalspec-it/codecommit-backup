@@ -25,6 +25,9 @@ fi
 # Perform backup of all repos into  appropriate folder name based on date
 while read repositoryName ; do
     git clone https://$ccurl/v1/repos/$repositoryName $backuppath/$datefolder/$repositoryName
+    cd $exagridpath/$datefolder/$repositoryName
+    git fetch --all
+    git pull --all
     reposToBackup[$repositoryName]=$id
 
 done < <(aws codecommit list-repositories | jq -r '.repositories[]|"\(.repositoryName)"')
