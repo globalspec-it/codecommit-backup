@@ -25,7 +25,7 @@ fi
 # Perform backup of all repos into  appropriate folder name based on date
 while read repositoryName ; do
     git clone https://$ccurl/v1/repos/$repositoryName $backuppath/$datefolder/$repositoryName
-    cd $exagridpath/$datefolder/$repositoryName
+    cd $backuppath/$datefolder/$repositoryName
     git fetch --all
     git pull --all
     reposToBackup[$repositoryName]=$id
